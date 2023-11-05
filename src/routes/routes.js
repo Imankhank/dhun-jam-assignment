@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AssiduusDahboard from '../modules/assiduus-dahboard';
+import Layout from '../components/layout/layout';
 
 
 const MainRoute = () => {
@@ -8,7 +9,9 @@ const MainRoute = () => {
         <>
             <Router>
                 <Routes>
-                    <Route path='/' element={<AssiduusDahboard />} />
+                    <Route element={<Layout />}>
+                        <Route path='/' element={<AssiduusDahboard />} />
+                    </Route>
                 </Routes>
             </Router>
         </>
