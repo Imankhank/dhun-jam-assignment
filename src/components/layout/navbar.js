@@ -12,7 +12,7 @@ import MenuOffcanvas from '../modals/menu-offcanvas';
 const Navbar = () => {
     const [show, setShow] = useState(false)
     return (
-        <nav className='navbarContainer d-flex justify-content-between align-items-center px-md-5 px-1 py-2 position-sticky top-0'>
+        <nav style={{ zIndex: "99" }} className='navbarContainer d-flex justify-content-between align-items-center px-md-5 px-1 py-2 position-sticky top-0'>
             <div>
                 <img className='d-md-block d-none' height={50} src={logo} alt='logo' />
                 <img className='d-md-none' height={40} src={moblogo} alt='logo' />

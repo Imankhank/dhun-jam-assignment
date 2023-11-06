@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import Select from 'react-select';
 import { allmonths, chaeckingAccountOptions, monthOptions } from '../components/data';
 import LineGraph from '../components/graphs/linegraph';
-import SineWaveGraph from '../components/graphs/linegraph';
-import RandomSineWave from '../components/graphs/linegraph';
-import RandomSineWaveD3 from '../components/graphs/linegraph';
-import KernelDensityEstimation from '../components/graphs/linegraph';
+import BarGraph from '../components/graphs/bargraph';
+import BarGraph2 from '../components/graphs/invoiceGraph';
 
 
 const AssiduusDahboard = () => {
@@ -27,8 +25,8 @@ const AssiduusDahboard = () => {
   return (
     <div className='row'>
       <div className='col-lg-6'>
-        <div className='first-card w-100 bg-fff rounded-2'>
-          <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center p-2'>
+        <div className='first-card w-100 bg-fff rounded-3'>
+          <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center px-3 py-2'>
             <span className='fw_500 fs_15'>
               Checking Account
             </span>
@@ -51,14 +49,46 @@ const AssiduusDahboard = () => {
           </div>
           <hr className='mt-1 horizontal-line w-100' />
           <div
-          className='p-3'
+            className='p-3'
           >
             <LineGraph selectedMonth={allmonths?.find((item) => item?.month === selectedMonth?.value)} />
           </div>
         </div>
+        <div className='first-card w-100 bg-fff rounded-3 mt-4'>
+          <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center p-3'>
+            <span className='fw_500 fs_15'>Total cash flow </span>
+            <div className='d-flex gap-4'>
+              <div className='d-flex gap-2 align-items-center'>
+                <span className='bg-primar1 rounded-1' style={{ height: "15px", width: "15px" }}>
+                </span>
+                <span className='fw_400 fs_18 color-000'>
+                  In
+                </span>
+              </div>
+              <div className='d-flex gap-2 align-items-center'>
+                <span className='bg-primar rounded-1' style={{ height: "15px", width: "15px" }}>
+                </span>
+                <span className='fw_400 fs_18 color-000 '>
+                  Out
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr className='mt-1 horizontal-line w-100' />
+          <BarGraph />
+        </div>
       </div>
       <div className='col-lg-6'>
-
+        <div className='first-card w-100 bg-fff rounded-3 '>
+          <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center p-3'>
+            <span className='fw_500 fs_15'>Invoices owed to you </span>
+            <button style={{ backgroundColor: "4fb14f20" }} className='primar-color border-0 rounded-1 py-1 px-3'>
+              New sales invoice
+            </button>
+          </div>
+          <hr className='mt-1 horizontal-line w-100' />
+          <BarGraph2 />
+        </div>
       </div>
 
     </div>

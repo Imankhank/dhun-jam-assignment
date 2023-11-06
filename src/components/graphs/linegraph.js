@@ -24,7 +24,7 @@ const Linegraph = ({ selectedMonth }) => {
             .line()
             .x((d, i) => xScale(i))
             .y((d) => yScale(d))
-            .curve(d3.curveCardinal);
+            .curve(d3.curveBasis);
 
         const xAxis = d3
             .axisBottom(xScale)
