@@ -14,8 +14,8 @@ const BarGraph2 = () => {
     ];
 
     useEffect(() => {
-        const margin = { top: 0, right: 10, bottom: 80, left: 10 };
-        const width = 800 - margin.left - margin.right;
+        const margin = { top: 0, right: 10, bottom: 120, left: 10 };
+        const width = 600 - margin.left - margin.right;
         const height = 300 - margin.top - margin.bottom;
 
         const svg = d3
@@ -45,8 +45,9 @@ const BarGraph2 = () => {
             .attr("fill", "hsla(0, 0%, 44%, 0.65)")
             .style("font-size", "15px")
             .style("font-weight", "500")
-            .attr("dy", "2em")
-            .attr("rx", 5);
+            .attr("rx", 5)
+            .attr("dy", "2em"); // Adjust the "1em" value to increase or decrease the space
+
 
         const bars = svg
             .selectAll(".bars")
@@ -57,9 +58,8 @@ const BarGraph2 = () => {
             .attr("y", (d) => yScale(d.cashIn))
             .attr("height", (d) => height - yScale(d.cashIn))
             .attr("width", xScale.bandwidth())
-            .attr("ry", 2)
+            .attr("ry", 4)
             .style("fill", "#4fb14f");
-
     }, []);
 
     return (

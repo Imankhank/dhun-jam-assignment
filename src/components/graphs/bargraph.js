@@ -17,7 +17,7 @@ const BarGraph = () => {
     const colors = ["#4fb14f", "#8adaac59"];
 
     useEffect(() => {
-        const margin = { top: 0, right: 10, bottom: 80, left: 10 };
+        const margin = { top: 0, right: 10, bottom: 100, left: 10 };
         const width = 800 - margin.left - margin.right;
         const height = 300 - margin.top - margin.bottom;
 

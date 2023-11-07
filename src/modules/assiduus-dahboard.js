@@ -4,6 +4,9 @@ import { allmonths, chaeckingAccountOptions, monthOptions } from '../components/
 import LineGraph from '../components/graphs/linegraph';
 import BarGraph from '../components/graphs/bargraph';
 import BarGraph2 from '../components/graphs/invoiceGraph';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import InvoiceModal from '../components/modals/invoice-modal';
+
 
 
 const AssiduusDahboard = () => {
@@ -13,7 +16,7 @@ const AssiduusDahboard = () => {
   });
   const [selectedMonth, setSelectedMonth] = useState({ value: 'january', label: 'January' },
   );
-
+  const [show, setShow] = useState(false)
   const data = [
     { x: 1, value: 10 },
     { x: 2, value: 20 },
@@ -24,6 +27,7 @@ const AssiduusDahboard = () => {
 
   return (
     <div className='row'>
+      <InvoiceModal show={show} handleClose={() => setShow(false)} />
       <div className='col-lg-6'>
         <div className='first-card w-100 bg-fff rounded-3'>
           <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center px-3 py-2'>
@@ -79,18 +83,40 @@ const AssiduusDahboard = () => {
         </div>
       </div>
       <div className='col-lg-6'>
-        <div className='first-card w-100 bg-fff rounded-3 '>
+        <div className='first-card w-100 bg-fff rounded-3 mt-lg-0 mt-4'>
           <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center p-3'>
             <span className='fw_500 fs_15'>Invoices owed to you </span>
-            <button style={{ backgroundColor: "4fb14f20" }} className='primar-color border-0 rounded-1 py-1 px-3'>
+            <button onClick={() => setShow(true)} style={{ backgroundColor: "4fb14f20" }} className='primar-color border-0 rounded-1 py-1 px-3'>
               New sales invoice
             </button>
           </div>
           <hr className='mt-1 horizontal-line w-100' />
           <BarGraph2 />
         </div>
+        <div className='first-card w-100 bg-fff rounded-3 mt-4'>
+          <div className='d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center p-3'>
+            <span className='fw_500 fs_15'>Total cash flow </span>
+            <div className='d-flex gap-4'>
+              <div className='d-flex gap-2 align-items-center'>
+                <span className='bg-primar1 rounded-1' style={{ height: "15px", width: "15px" }}>
+                </span>
+                <span className='fw_400 fs_18 color-000'>
+                  In
+                </span>
+              </div>
+              <div className='d-flex gap-2 align-items-center'>
+                <span className='bg-primar rounded-1' style={{ height: "15px", width: "15px" }}>
+                </span>
+                <span className='fw_400 fs_18 color-000 '>
+                  Out
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr className='mt-1 horizontal-line w-100' />
+          <BarGraph />
+        </div>
       </div>
-
     </div>
   )
 }
