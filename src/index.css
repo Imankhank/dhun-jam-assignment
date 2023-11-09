@@ -8,8 +8,16 @@ body {
 .primar-color {
   color: #4fb14f;
 }
+
+.color_grey {
+  color: hsla(0, 0%, 44%, 0.65);
+}
 .bg-primar {
   background-color: #4fb14f;
+}
+
+.color_effcef {
+  color: #effcef;
 }
 .bg_red {
   background-color: red;

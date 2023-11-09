@@ -4,28 +4,23 @@ const Linegraph = ({ selectedMonth }) => {
     const svgRef = useRef();
     useEffect(() => {
         const w = 800;
-        const h = 180;
+        const h = 165;
         const svg = d3
             .select(svgRef.current)
             .attr("width", w)
             .attr("height", h)
             .style("overflow", "visible");
-
         svg.selectAll("*").remove();
-
         const xScale = d3
             .scaleLinear()
             .domain([0, Object.keys(selectedMonth?.data)?.length - 1])
             .range([0, w]);
-
         const yScale = d3.scaleLinear().domain([0, d3.max(Object.values(selectedMonth?.data))]).range([h, 0]);
-
         const generateScaledLine = d3
             .line()
             .x((d, i) => xScale(i))
             .y((d) => yScale(d))
             .curve(d3.curveBasis);
-
         const xAxis = d3
             .axisBottom(xScale)
             .tickValues(d3.range(0, Object.keys(selectedMonth?.data).length, 2))

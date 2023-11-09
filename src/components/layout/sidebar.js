@@ -17,28 +17,28 @@ const Sidebar = () => {
     const sidebarData = [
         {
             name: "Dashboard",
-            image: (<DashboardIcon fill={activeTab === "Dashboard" ? "#fff" : "#000"} width={15} height={15} />),
+            image: (<DashboardIcon fill={activeTab === "Dashboard" ? "#fff" : "#000"} width={20} height={20} />),
         },
         {
             name: "Accounts",
-            image: (<AccountIcon fill={activeTab === "Accounts" ? "#fff" : "#000"} width={15} height={15} />)
+            image: (<AccountIcon fill={activeTab === "Accounts" ? "#fff" : "#000"} width={20} height={20} />)
         },
 
         {
             name: "Payroll",
-            image: (<DollarIcon fill={activeTab === "Payroll" ? "#fff" : "#000"} width={15} height={15} />)
+            image: (<DollarIcon fill={activeTab === "Payroll" ? "#fff" : "#000"} width={20} height={20} />)
         },
         {
             name: "Reports",
-            image: (<ReportIcon fill={activeTab === "Reports" ? "#fff" : "#000"} width={15} height={15} />)
+            image: (<ReportIcon fill={activeTab === "Reports" ? "#fff" : "#000"} width={20} height={20} />)
         },
         {
             name: "Advisor",
-            image: (<AdvisorIcon fill={activeTab === "Advisor" ? "#fff" : "#000"} width={15} height={15} />)
+            image: (<AdvisorIcon fill={activeTab === "Advisor" ? "#fff" : "#000"} width={20} height={20} />)
         },
         {
             name: "Contacts",
-            image: (<ContactIcon fill={activeTab === "Contacts" ? "#fff" : "#000"} width={15} height={15} />)
+            image: (<ContactIcon fill={activeTab === "Contacts" ? "#fff" : "#000"} width={20} height={20} />)
         },
 
     ]

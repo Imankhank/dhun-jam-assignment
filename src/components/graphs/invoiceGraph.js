@@ -15,7 +15,7 @@ const BarGraph2 = () => {
 
     useEffect(() => {
         const margin = { top: 0, right: 10, bottom: 120, left: 10 };
-        const width = 600 - margin.left - margin.right;
+        const width = 650 - margin.left - margin.right;
         const height = 300 - margin.top - margin.bottom;
 
         const svg = d3
