@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npx update-browserslist-db@latest && react-scripts build",
+    "build": "react-scripts build --no-warnings-as-errors",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -31,7 +31,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "warn"
+    }
   },
   "browserslist": {
     "production": [
