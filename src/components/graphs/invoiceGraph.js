@@ -31,8 +31,6 @@ const BarGraph2 = () => {
             .range([0, width])
             .padding(0.8);
 
-        const yScale = d3.scaleLinear().domain([0, 400]).range([height, 0]);
-        const barWidth = xScale.bandwidth() * 0.7;
 
         const xAxis = d3.axisBottom(xScale).tickSize(0);
 
@@ -60,7 +58,7 @@ const BarGraph2 = () => {
         //     .attr("width", xScale.bandwidth())
         //     .attr("ry", 4)
         //     .style("fill", "#4fb14f");
-    }, []);
+    }, [data]);
 
     return (
         <div className="no-scrollbars px-2">

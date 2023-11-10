@@ -5,7 +5,6 @@ import * as d3 from "d3";
 
 const BarGraph = () => {
 
-    const abc = ""
     const svgRef = useRef();
     const data = [
         { month: "January", cashIn: 104, cashOut: 152 },
@@ -75,7 +74,7 @@ const BarGraph = () => {
             .attr("width", xScale.bandwidth())
             .attr("ry", 2); // Set the horizontal radius for rounded corners
         ;
-    }, [abc]);
+    }, [colors, data]);
 
     return (
         <div className="no-scrollbars px-2">
