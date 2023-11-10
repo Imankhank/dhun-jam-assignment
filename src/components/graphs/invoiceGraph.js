@@ -23,7 +23,12 @@ const BarGraph2 = ({ selectedMonth }) => {
       { month: `${selectedMonth?.label.slice(0, 3)} 01-08`, cashIn: 150 },
       { month: `${selectedMonth?.label.slice(0, 3)} 09-16`, cashIn: 180 },
       { month: `${selectedMonth?.label.slice(0, 3)} 17-24`, cashIn: 200 },
-      { month: `${selectedMonth?.label.slice(0, 3)} 25-31`, cashIn: 250 },
+      {
+        month: `${selectedMonth?.label.slice(0, 3)} 25-${
+          selectedMonth?.label.slice(0, 3) === "Feb" ? "28" : "30"
+        }`,
+        cashIn: 250,
+      },
       { month: "future", cashIn: 200 },
     ];
     const xScale = d3
