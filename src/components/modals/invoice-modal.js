@@ -1,4 +1,3 @@
-import { Button } from 'bootstrap';
 import React from 'react'
 import Modal from 'react-bootstrap/Modal';
 import ImageUpload from '../forms/image-upload';

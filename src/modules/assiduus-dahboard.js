@@ -17,14 +17,6 @@ const AssiduusDahboard = () => {
   const [selectedMonth, setSelectedMonth] = useState({ value: 'january', label: 'January' },
   );
   const [show, setShow] = useState(false)
-  const data = [
-    { x: 1, value: 10 },
-    { x: 2, value: 20 },
-    { x: 3, value: 15 },
-    { x: 4, value: 30 },
-    // Add more data points for subsequent x values as needed
-  ];
-
   return (
     <div className='row'>
       <InvoiceModal show={show} handleClose={() => setShow(false)} />

@@ -49,17 +49,17 @@ const BarGraph2 = () => {
             .attr("dy", "2em"); // Adjust the "1em" value to increase or decrease the space
 
 
-        const bars = svg
-            .selectAll(".bars")
-            .data(data)
-            .enter()
-            .append("rect")
-            .attr("x", (d) => xScale(d.month) + (xScale.bandwidth() - barWidth) / 2)
-            .attr("y", (d) => yScale(d.cashIn))
-            .attr("height", (d) => height - yScale(d.cashIn))
-            .attr("width", xScale.bandwidth())
-            .attr("ry", 4)
-            .style("fill", "#4fb14f");
+        // const bars = svg
+        //     .selectAll(".bars")
+        //     .data(data)
+        //     .enter()
+        //     .append("rect")
+        //     .attr("x", (d) => xScale(d.month) + (xScale.bandwidth() - barWidth) / 2)
+        //     .attr("y", (d) => yScale(d.cashIn))
+        //     .attr("height", (d) => height - yScale(d.cashIn))
+        //     .attr("width", xScale.bandwidth())
+        //     .attr("ry", 4)
+        //     .style("fill", "#4fb14f");
     }, []);
 
     return (

@@ -26,7 +26,7 @@ function ImageUpload() {
                 (selectedImage ?
                     <>
                         <div style={{ height: "12rem" }} className='rounded-3  position-relative w-100'>
-                            <img style={{ width: "100%", height: "11.9rem", objectFit: "cover" }} src={selectedImage} alt="Uploaded Image" />
+                            <img style={{ width: "100%", height: "11.9rem", objectFit: "cover" }} src={selectedImage} alt="invoice" />
                             <span onClick={() => setSelectedImage(null)} className='position-absolute bottom-0 end-0 pe-4 pb-2'>
                                 <DeleteIconWithBg fill="#F24444" bgFill="#FFFFFF" />
                             </span>

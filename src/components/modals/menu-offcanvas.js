@@ -1,10 +1,6 @@
 import React from 'react'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from "../../assets/assiduus-log.webp"
-import SearchIcon from '../../assets/search-line';
-import NotificationIcon from '../../assets/notification';
-import profile from "../../assets/profile-image.JPG"
-import DropDown from '../../assets/drop-down';
 import Sidebar from '../layout/sidebar';
 
 const MenuOffcanvas = ({ show, handleClose = () => { } }) => {
