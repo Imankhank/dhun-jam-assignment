@@ -40,7 +40,7 @@ function ImageUpload() {
                                 <UploadIcon />
                             </span>
                             <div className='d-flex justify-content-center align-items-center h-100 w-100'>
-                                <img style={{ height: "12rem" }} src={UplaodImgLogo} />
+                                <img alt='logo' style={{ height: "12rem" }} src={UplaodImgLogo} />
                             </div>
                             <div className='d-none'>
                                 <input id='image' type="file" accept="image/*" onChange={handleImageChange} />
