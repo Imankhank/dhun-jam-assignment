@@ -28,7 +28,7 @@ const MenuOffcanvas = ({ show, handleClose = () => { } }) => {
                     <SearchIcon className="pb-1" />
                     <input style={{ backgroundColor: "#effcef" }} className='border-0 input-field' type='text' />
                 </div> */}
-                <Sidebar />
+                <Sidebar handleClose={handleClose} />
             </Offcanvas.Body>
         </Offcanvas>
     )
