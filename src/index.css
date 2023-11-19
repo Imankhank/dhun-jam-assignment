@@ -1,74 +1,79 @@
+/* Font size of headings: 32px
+• All other font size: 16px
+• Font family: Poppins
+
+• Screen background: 030303
+
+• Font colour: FFFFFF
+• Radio button background colour: FFFFFF   =================
+• Selected radio button colour: 6741D9  ======================
+• Text field/Input field border: FFFFFF
+• Graph bars colour: F0C3F1
+
+• Bar axis and markings colour: FFFFFF
+
+• Save button background: 6741D9
+• Hover on Save button: Border becomes active, F0C3F1, 1px.
+• Click on Save button: Border becomes active, F0C3F1, 1px.
+• Width for
+
+a) Headings- 600px, justify centre.
+b) Fields on Screen 1 and Screen 2- 600px.
+c) Login, Sign up, Save button- 600px, justify, centre.
+d) Graph container- 600px
+• Width for all other elementsa) Maximum- 300px
+b) Minimum- Fit to size.
+• Greyed out fieldsa) Greyed out radio button background- C2C2C2
+b) Greyed out text/input fields: Colour of border and value present changes to C2C2C2. */
+
 body {
+  height: 100%;
   margin: 0;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #effcef !important;
+  background-color: #030303 !important;
 }
-.primar-color {
-  color: #4fb14f;
-}
-
-.color_grey {
-  color: hsla(0, 0%, 44%, 0.65);
-}
-.bg-primar {
-  background-color: #4fb14f;
+.fs_32 {
+  font-size: 32px;
 }
 
-.color_effcef {
-  color: #effcef;
+.fs_16 {
+  font-size: 16px;
 }
-.bg_red {
-  background-color: red;
+.fw_400 {
+  font-weight: 400;
 }
-.bg-primar1 {
-  background-color: #8adaac59;
-}
-
 .fw_500 {
   font-weight: 500;
 }
-.bg-effcef {
-  background-color: #effcef;
+.fw_600 {
+  font-weight: 600;
+}
+.cursor_pointer {
+  cursor: pointer;
 }
 
-.color-fff {
-  color: #fff;
+.color_FFFFFF {
+  color: #ffffff;
 }
-.bg-fff {
-  background-color: #fff;
-}
-.color-000 {
-  color: #000;
+.bg_030303 {
+  background-color: #030303;
 }
 
-.first-card {
-  height: 22rem;
+.border_FFFFFF {
+  border: 1px solid #ffffff;
 }
 
-.horizontal-line {
-  border: 1px solid hsla(0, 0%, 44%, 0.65);
-}
-.react-select {
-  width: 8rem;
-}
-.react-select:focus {
-  outline: none;
+.bar_color {
+  color: #f0c3f1;
 }
 
-.fs_15 {
-  font-size: 15px;
+.bg_6741D9 {
+  background-color: #6741d9;
 }
-.no-scrollbars {
-  overflow: auto;
-  scrollbar-width: none;
-}
-
-.no-scrollbars::-webkit-scrollbar {
-  display: none;
-}
-
-.domain {
-  display: none;
+.input-field::placeholder {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
 }

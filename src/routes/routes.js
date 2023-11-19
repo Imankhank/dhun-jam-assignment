@@ -1,21 +1,22 @@
-import React from 'react';
+import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import AssiduusDahboard from '../modules/assiduus-dahboard';
-import Layout from '../components/layout/layout';
-
-
+import Login from "../modules/login";
+import Dashbooard from "../modules/dahboard";
+import { ToastContainer } from "react-toastify";
+import ScrollToTop from "../components/scroll-to-top";
 const MainRoute = () => {
-    return (
-        <>
-            <Router>
-                <Routes>
-                    <Route element={<Layout />}>
-                        <Route path='/' element={<AssiduusDahboard />} />
-                    </Route>
-                </Routes>
-            </Router>
-        </>
-    )
-}
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/:id" element={<Dashbooard />} />
+        </Routes>
+        <ToastContainer limit={2} />
+        <ScrollToTop />
+      </Router>
+    </>
+  );
+};
 
-export default MainRoute
+export default MainRoute;
