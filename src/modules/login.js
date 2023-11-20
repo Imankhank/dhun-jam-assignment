@@ -27,7 +27,6 @@ const Login = () => {
   };
 
   const onSuccess = (data) => {
-    successToast(data?.response);
     navigate(`/${data?.data?.id}`);
   };
   const onError = (data) => {

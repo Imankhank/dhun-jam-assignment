@@ -9,7 +9,7 @@ const MainRoute = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/:id" element={<Dashbooard />} />
         </Routes>
         <ToastContainer limit={2} />
